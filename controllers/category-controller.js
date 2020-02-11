@@ -25,17 +25,3 @@ const category = {
 };
 
 module.exports = category;
-// 'use strict';
-// const Category = require('../models/category-model.js');
-// exports.findAll = (req, res)=>{
-//     Category.getCategories((err, data)=>{
-      
-//         if(err){
-//             res.status(500).send({
-//                 message: err.message || "Some error occured while retrieving customers"
-//             })
-//         }else{
-//             res.send(data);
-//         }
-//     });
-// }
