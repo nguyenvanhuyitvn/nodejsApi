@@ -1,17 +1,20 @@
-const router = express.Router();
-const {
-	GetProducts,
-	GetProductsAttributes,
-	GetFilteredProducts,
-	GetProductDetailsById
-} = require('../controllers/product-controller');
-// get All product
-router.get('/getProducts', GetProducts);
-// Get product related attributes
-router.get('/getProductsAttributes', GetProductsAttributes);
-// get all filtered products
-router.post('/getFilteredProducts',GetFilteredProducts);
-// get product details by product_id
-router.get('/getProductDetails', GetProductDetailsById);
 
-module.exports = router; 
+    
+const express = require('express');
+const router = express.Router();
+const { 
+    GetProducts,
+    GetProductDetailsById,
+    CreateProduct
+ } = require('../controllers/product-controller');
+
+//get all Product
+router.get('/getProducts', GetProducts);
+
+// get product details by product id
+router.get('/getProductDetails', GetProductDetailsById);
+// create product
+router.post('/createProduct', CreateProduct);
+
+
+module.exports = router;
